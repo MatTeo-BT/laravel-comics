@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@yield('title','Laravel App Title')</title>
+        <link rel="shortcut icon" href="{{ Vite::asset('resources/img/favicon.ico') }}" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        @vite('resources/js/app.js')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title','Laravel App Title')</title>
-    @vite('resources/js/app.js')
+        @yield('head-content')
+    </head>
+    <body>
+        @include('layouts.partials.header')
 
-    @yield('head-content')
-</head>
+        <main>
+            @yield('main-content')
+        </main>
 
-<body>
-    @include('layouts.partials.header')
-
-    <main>
-        @yield('main-content')
-    </main>
-
-    @include('layouts.partials.footer')
-</body>
-
+        @include('layouts.partials.footer')
+    </body>
 </html>

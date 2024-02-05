@@ -1,1 +1,9 @@
-@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import './partials/header';
+@import './partials/comics';
+@import './partials/footer';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
